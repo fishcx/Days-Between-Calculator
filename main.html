@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Tom Fisher FishMath.com">
+	<title>Days Between Calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1hHnc5a1nl-FpDmmVsh2HDOi5eHhIAzgn">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  </head>
+
+  <body>
+	<form id="dateBetween">
+		<h2>Days Between Calculator</h2><br>
+		<p>Enter two dates below to calculate the number of days between them.</p>
+		<table>
+		<tr>
+			<td><input type="text" name="date1" id="date1" class="datepicker"></td>
+			<td><input type="text" name="date2" id="date2" class="datepicker"></td>
+		</tr>
+		</table>
+		<br>
+		<input type="button" value="Calculate" id="calculate" class="btn btn-main btn-primary">
+		<br>
+		<br>
+		<div id="generatedOutput"></div>
+	</form>
+  </body>
+</html>
+
+<?!= include('Javascript'); ?> 

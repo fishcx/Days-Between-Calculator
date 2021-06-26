@@ -1,0 +1,23 @@
+<script type="text/javascript">
+$(document).ready(function() {
+	//$( ".datepicker" ).datepicker();
+    
+	$('#calculate').click(function(){
+        var days = Math.abs(daydiff(parseDate($('#date1').val()), parseDate($('#date2').val())));  
+        var plural = ""; var a = " is ";
+        if(days > 1){plural = "s"; a = "  are ";}
+		$("#generatedOutput").html("There"+a+days+" day"+plural+" between "+$('#date1').val()+" and "+$('#date2').val()+".");
+
+	});
+
+	function parseDate(str) {
+		var mdy = str.split('/')
+		return new Date(mdy[2], mdy[0]-1, mdy[1]);
+	}
+
+	function daydiff(first, second) {
+        // need to do round to avoid daylight savings time since not all days are 24 hours
+		return Math.round((second-first)/(1000*60*60*24));
+	}
+});
+</script>
